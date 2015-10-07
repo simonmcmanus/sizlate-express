@@ -1,0 +1,21 @@
+{
+  "name": "sizlate-express",
+  "version": "1.0.0",
+  "description": "standalone express functionality for sizlate",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/jasmine-node/bin/jasmine-node ./spec/express.spec.js",
+    "test-watch": "node node_modules/jasmine-node/bin/jasmine-node --autotest ./spec/*",
+    "build-client": "node ./node_modules/browserify/bin/cmd.js ./client/client.js > ./sizlate-client.js",
+    "watch": "node ./node_modules/watchify/bin/cmd.js ./client/client.js -o ./sizlate-client.js --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sizlate": "^1"
+  },
+  "devDependencies": {
+    "cheerio": "^0.19.0",
+    "jasmine-node": "^1.14.5"
+  }
+}
